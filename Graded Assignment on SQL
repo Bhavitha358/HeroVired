@@ -20,8 +20,8 @@ CREATE TABLE doctor (
     );
     
 CREATE TABLE APPOINTMENTS ( 
-	  APPOINT_ID INT PRIMARY KEY,
-	  PID INT ,                                      -- patient_id 
+    APPOINT_ID INT PRIMARY KEY,
+    PID INT ,                                      -- patient_id 
     PNAME VARCHAR(40) NOT NULL,                    -- patient name
     DOC_ID INT ,                        -- doctor id
     DOC_NAME VARCHAR(40) NOT NULL,                 -- doctor name
@@ -31,7 +31,7 @@ CREATE TABLE APPOINTMENTS (
     );
 
 CREATE TABLE PATIENTS (
-	  ID INT PRIMARY KEY,
+    ID INT PRIMARY KEY,
     PNAME VARCHAR(40) NOT NULL,
     AGE INT NOT NULL,
     CONTACT INT NOT NULL,
@@ -39,7 +39,7 @@ CREATE TABLE PATIENTS (
     );
 
 CREATE TABLE REVIEWS (
-	  PID INT PRIMARY KEY,
+    PID INT PRIMARY KEY,
     PNAME VARCHAR(40) NOT NULL,
     DOC_ID INT,
     DOC_NAME VARCHAR(40) NOT NULL,
