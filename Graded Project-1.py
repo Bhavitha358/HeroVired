@@ -50,27 +50,27 @@ import mysql.connector
 mydb = mysql.connector.connect(host = 'localhost',user = 'root',password='Bhavi@mysql358',database = 'INVENTORY_MANAGEMENT')
 cur=mydb.cursor()
 
-insertion = 'insert into MANUFACTURE(id,product_name,color,quantity,manufacturing_date,defective_ITEM,company_name) values(%s,%s,%s,%s,%s,%s,%s)'
-value = [(1, 'Toy Car', 'Red', 100, '01-05-23', 0,'TANISH'),(2, 'Toy Train', 'Green', 50, '01-05-23', 0,'SS Export'),(3, 'Wooden Chair', 'Brown', 200, '01-04-23', 0,'SS Export'),(4, 'Wooden Table', 'Brown', 100, '01-03-23', 0,'VGC')]
-cur.executemany(insertion,value)
+insertion1 = 'insert into MANUFACTURE(id,product_name,color,quantity,manufacturing_date,defective_ITEM,company_name) values(%s,%s,%s,%s,%s,%s,%s)'
+value1 = [(1, 'Toy Car', 'Red', 100, '01-05-23', 0,'TANISH'),(2, 'Toy Train', 'Green', 50, '01-05-23', 0,'SS Export'),(3, 'Wooden Chair', 'Brown', 200, '01-04-23', 0,'SS Export'),(4, 'Wooden Table', 'Brown', 100, '01-03-23', 0,'VGC')]
+cur.executemany(insertion1,value1)
 mydb.commit()
 
 #inserting values into GOODS table.
-insertion = 'insert into GOODS(id,product_name,color,quantity,manufacturing_date) values(%s,%s,%s,%s,%s)'
-value = [(1, 'Toy Car', 'Red', 100, '01-05-23'),(2, 'Toy Train', 'Green', 50, '01-05-23'),(3, 'Wooden Chair', 'Brown', 200, '01-04-23'),(4, 'Wooden Table', 'Brown', 100, '01-03-23')]
-cur.executemany(insertion,value)
+insertion2 = 'insert into GOODS(id,product_name,color,quantity,manufacturing_date) values(%s,%s,%s,%s,%s)'
+value2 = [(1, 'Toy Car', 'Red', 100, '01-05-23'),(2, 'Toy Train', 'Green', 50, '01-05-23'),(3, 'Wooden Chair', 'Brown', 200, '01-04-23'),(4, 'Wooden Table', 'Brown', 100, '01-03-23')]
+cur.executemany(insertion2,value2)
 mydb.commit()
 
 #inserting values into PURCHASE table.
-insertion = 'insert into PURCHASE(id,store_name,product_name,color,quantity,purchase_amount,purchase_date) values(%s,%s,%s,%s,%s,%s,%s)'
-value = [(1, 'MyKids', 'Toy Car', 'Red', 50, 500, '01-05-23'),(2, 'MyKids', 'Toy Train', 'Green', 25, 250, '01-05-23'),(3, 'ORay', 'Shirt', 'Blue',10,200,'01-05-23')]
-cur.executemany(insertion,value)
+insertion3 = 'insert into PURCHASE(id,store_name,product_name,color,quantity,purchase_amount,purchase_date) values(%s,%s,%s,%s,%s,%s,%s)'
+value3 = [(1, 'MyKids', 'Toy Car', 'Red', 50, 500, '01-05-23'),(2, 'MyKids', 'Toy Train', 'Green', 25, 250, '01-05-23'),(3, 'ORay', 'Shirt', 'Blue',10,200,'01-05-23')]
+cur.executemany(insertion3,value3)
 mydb.commit()
 
 #inserting values into SALE table.
-insertion = 'insert into SALE(id,store_name,product_name,color,no_of_items,sale_amount,sale_date,profit_margin) values(%s,%s,%s,%s,%s,%s,%s,%s)'
-value = [(1, 'Offline store', 'Toy Car', 'Green', 100, 800, '2023-04-05',10),(2, 'Online store', 'Toy Train', 'Green', 100, 800, '2023-01-05',12.2),(3, 'Offlin store', 'Wooden Chair', 'Green', 100, 800, '2023-04-10',15.6),(4, 'Online store', 'Wooden Table', 'Green', 100, 800, '2023-03-15',13.65),(5, 'Offline store', 'Toy Train', 'Green', 100, 800, '2023-09-25',18.65)]
-cur.executemany(insertion,value)
+insertion4 = 'insert into SALE(id,store_name,product_name,color,no_of_items,sale_amount,sale_date,profit_margin) values(%s,%s,%s,%s,%s,%s,%s,%s)'
+value4 = [(1, 'Offline store', 'Toy Car', 'Green', 100, 800, '2023-04-05',10),(2, 'Online store', 'Toy Train', 'Green', 100, 800, '2023-01-05',12.2),(3, 'Offlin store', 'Wooden Chair', 'Green', 100, 800, '2023-04-10',15.6),(4, 'Online store', 'Wooden Table', 'Green', 100, 800, '2023-03-15',13.65),(5, 'Offline store', 'Toy Train', 'Green', 100, 800, '2023-09-25',18.65)]
+cur.executemany(insertion4,value4)
 mydb.commit()
 
 
