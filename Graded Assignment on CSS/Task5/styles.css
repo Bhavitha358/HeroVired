@@ -1,0 +1,35 @@
+* {
+    background-color: rgb(252, 233, 216);
+}
+h1 {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 0;
+}
+img {
+    width: 200px;
+    height: 150px;
+}
+
+.img-container1, .img-container2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    padding: 32px 0;
+    margin-top: 0.5rem;
+}
+
+.img-card {
+    background-color: #fff;
+    border-radius: 11px;
+    box-shadow: 0 3px 10px #8b8eaf;
+    padding: 20px;
+    margin: 10px;
+}
+
+.img-card:hover {
+    transform: scale(1.2);
+}
