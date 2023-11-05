@@ -1,0 +1,75 @@
+<html>
+    <head>
+        <title>Admin Profile page</title>
+        <style>
+            body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url("static/bookPage.png");
+            background-size: cover;
+            }
+
+            h1 {
+            background-color: lightblue;
+            color: black;
+            padding: 20px;
+            margin: 0;
+            padding-left: 40%;
+            }
+
+            p {
+            font-size: 1.3em;
+            margin-left: 26%;
+            padding: 10px;
+            width: 50%;
+            border: 1px solid orangered;
+            opacity: 0.85;
+            border-radius: 10px;
+            background: rgb(207, 98, 20);
+            color:white;
+            text-align: center;
+            }
+
+            p:hover{
+                opacity: 1;
+            }
+
+            button {
+                background-color: blue;
+                font-size: 1em;
+                color: #fff;
+                border: none;
+                padding: 10px 20px;
+                border-radius: 5px;
+                cursor: pointer;
+                margin-top: 20px;
+                margin-left:29px;
+            }
+            button:hover{
+                opacity:0.8;
+            }
+            form{
+                display:inline-block;
+            }
+            .buttons{
+                display:flex;
+                flex-direction: row;
+                justify-content: center;
+            }
+            </style>
+    </head>
+    <body>
+        <%- include('layout_admin') %>
+        <h1>Admin Profile Page</h1>
+        <p>Name: <%=user_details.name%></p>
+        <p>Email: <%=user_details.email%></p>
+        <div class="buttons">
+        <a href="/all-books"><button>All books</button></a>
+        <a href="/get-add-book"><button>Add Books</button></a>
+        <form action="/logout" method="POST">
+            <button type="submit">Log Out</button>
+        </form>
+    </div>
+    </body>
+</html> 

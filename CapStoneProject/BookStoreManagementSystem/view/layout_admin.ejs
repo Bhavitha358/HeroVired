@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Your head content here -->
+    <!-- Include Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* CSS for Navbar */
+header {
+    background-color: #333;
+    padding: 10px 0;
+}
+
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+}
+
+nav ul li {
+    text-align: center;
+    margin-right: 20px; /* Spacing between navbar items */
+}
+
+nav ul li:last-child {
+    margin-right: 0; /* Remove margin for the last navbar item */
+}
+
+nav a {
+    text-decoration: none;
+    color: #3e5cb5;
+    font-weight: bold;
+    transition: color 0.3s; /* Smooth color transition on hover */
+}
+
+nav a:hover {
+    color: #ff9900; /* Change color on hover */
+}
+
+.cart-link {
+    text-decoration: none;
+    color: #3e5cb5;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.cart-link i {
+    margin-right: 5px; /* Spacing between the cart icon and "Cart" text */
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/admin-profile">Home</a></li>
+                <li><a href="/get-add-book">Add Book</a></li>
+                <li><a href="/all-books">All books</a></li>
+                <li><a href="/">Logout</a></li>
+        <!-- Cart link at the end -->
+        </ul>
+    </nav>
+    </header>
+    
+    <!-- Your main content here -->
+</body>
+</html>

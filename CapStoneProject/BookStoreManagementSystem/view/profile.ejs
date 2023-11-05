@@ -1,0 +1,79 @@
+<html>
+    <head>
+        <title>Profile page</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                background-image: url("../static/p1.jpg");
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+
+            h1 {
+                background-color: lightblue;
+                color: black;
+                padding: 20px;
+                margin: 0;
+                padding-left: 45%;
+            }
+
+            p {
+                background: black;
+                width: 40vw;
+                font-size: 25px;
+                margin: 20px;
+                padding: 10px;
+                color: white;
+                text-align: center;
+                margin-left: 30%;
+                border-radius: 9px;
+                margin-bottom: 30px;
+                opacity: 0.8;
+            }
+
+            button {
+                background-color: blue;
+                color: #fff;
+                border: none;
+                padding: 10px 20px;
+                border-radius: 5px;
+                cursor: pointer;
+                margin-left:39px;
+                margin-top: 20px;
+            }
+
+            button:hover{
+                opacity:0.7;
+            }
+
+            form{
+                display:inline-block;
+            }
+            
+            .buttons{
+                display:flex;
+                flex-direction: row;
+                justify-content: center;
+            }
+            </style>
+    </head>
+    <body>
+        <%- include('layout') %>
+        <h1>Profile Page</h1>
+        <div class="box">
+        <p><strong>Name: </strong><%=user_details.name%></p>
+        <p><strong>Email: </strong><%=user_details.email%></p>
+        <div class="buttons">
+        <a href="/profile/get-books"><button class="get-books">Get books</button></a>
+        <a href="/my-cart"><button class="my-cart">My Cart</button></a>
+        <a href="/get-update-profile"><button>Update Profile</button></a>
+        <form action="/logout" method="POST">
+            <button type="submit" class="logout">Log Out</button>
+        </form>
+    </div>
+    </div>
+    </body>
+</html> 
